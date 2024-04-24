@@ -9,4 +9,20 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('videos')
+  getVideos() {
+    return [
+      {
+        title: 'Video 1',
+        description: 'Description 1',
+        thumbnail: 'https://via.placeholder.com/150',
+      },
+      {
+        title: 'Video 2',
+        description: 'Description 2',
+        thumbnail: 'https://via.placeholder.com/150',
+      },
+    ];
+  }
 }
